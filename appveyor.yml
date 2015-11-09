@@ -26,11 +26,7 @@ platform:
     -x64
 
 install:
-    
-    # Clone ci-helpers
-    - "git clone git://github/astropy/ci-helpers.git"
-
-    # Install miniconda using a powershell script.
+    - "git clone git://github.com/astropy/ci-helpers.git"
     - "powershell ci-helpers/appveyor/install-miniconda.ps1"
 
 # Not a .NET project, we build SunPy in the install step instead
