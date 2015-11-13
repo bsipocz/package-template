@@ -10,7 +10,7 @@ environment:
       PYTHON_ARCH: "64" # needs to be set for CMD_IN_ENV to succeed. If a mix
                         # of 32 bit and 64 bit builds are needed, move this
                         # to the matrix section.
-      CONDA_DEPENDENCIES: "Cython"
+      CONDA_DEPENDENCIES: ""
 
   matrix:
 
@@ -35,7 +35,7 @@ install:
     - "SET PATH=%PYTHON%;%PYTHON%\\Scripts;%PATH%"
     - "activate test"
 
-# Not a .NET project, we build SunPy in the install step instead
+# Not a .NET project, we build the package in the install step instead
 build: false
 
 test_script:
