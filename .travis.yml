@@ -128,7 +128,7 @@ before_install:
           brew update;
           brew install timeout;
           alias timeout=gtimeout;
-          which timeout
+          which timeout;
       fi
 
 install:
