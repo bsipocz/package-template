@@ -4,7 +4,6 @@
 language: c
 
 os:
-    - linux
     - osx
 
 # Setting sudo to false opts in to Travis-CI container-based builds.
@@ -125,9 +124,11 @@ matrix:
 
 before_install:
     - if [[ $TRAVIS_OS_NAME == osx ]]; then
+          set -x
           brew update;
           brew install timeout;
           alias timeout=gtimeout;
+          which timeout
       fi
 
 install:
