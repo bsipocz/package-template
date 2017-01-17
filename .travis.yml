@@ -126,7 +126,7 @@ before_install:
     - if [[ $TRAVIS_OS_NAME == osx ]]; then
           set -x
           brew update;
-          brew install timeout;
+          brew install coreutils;
           alias timeout=gtimeout;
           which timeout;
       fi
