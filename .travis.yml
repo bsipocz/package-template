@@ -123,6 +123,13 @@ matrix:
         - os: linux
           env: MAIN_CMD='pycodestyle packagename --count' SETUP_CMD=''
 
+before_install:
+    - if [[ $TRAVIS_OS_NAME == osx ]]; then
+          brew update;
+          brew install timeout;
+          alias timeout=gtimeout;
+      fi
+
 install:
 
     # We now use the ci-helpers package to set up our testing environment.
