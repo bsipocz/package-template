@@ -68,7 +68,7 @@ matrix:
 
 before_install:
     - if [[ $TRAVIS_OS_NAME == osx ]]; then
-          alias timeout=gtimeout
+          alias timeout=gtimeout;
       fi
 
 install:
