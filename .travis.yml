@@ -69,11 +69,7 @@ matrix:
 before_install:
     - if [[ $TRAVIS_OS_NAME == osx ]]; then
           set -x
-          brew update;
-          brew install coreutils;
-          alias timeout=gtimeout;
-          which gtimeout;
-          which timeout;
+          find /usr/local -name "*timeout*"
       fi
 
 install:
