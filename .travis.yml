@@ -32,6 +32,7 @@ env:
         - MAIN_CMD='python setup.py'
         - SETUP_CMD='test'
         - PIP_DEPENDENCIES=''
+        - CONDA_VERSION=4.3.5
 
         # For this package-template, we include examples of Cython modules,
         # so Cython is required for testing. If your package does not include
