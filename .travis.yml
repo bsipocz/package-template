@@ -71,7 +71,7 @@ before_install:
           set -x;
           alias;
           alias timeout='gtimeout';
-          which timeout;
+          alias;
       fi
 
 install:
